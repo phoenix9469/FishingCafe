@@ -308,9 +308,9 @@ void loop()
       initFlag = 1;
     }
 
-    if (uart_buffer[1] == 0x14) // Calibrate
+    if (uart_buffer[1] == 0x14) // Callibrate
     {
-      calibrateSequence();
+      callibrateSequence();
       initFlag = 1;
       unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
       Serial.write(init_message, sizeof(init_message));
