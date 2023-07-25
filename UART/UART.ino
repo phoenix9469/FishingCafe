@@ -100,7 +100,7 @@ void motorControl()
   mcp.digitalWrite(MOTOR_CONTROL, HIGH);
 }
 
-void calibrateSequence()
+void callibrateSequence()
 {
   unsigned char cal1_message[33] = {0x02, 0x19, 'C', 'A', 'L', 'L', 'I', 'B', 'R', 'A', 'T', 'E', 0x20, 'M', 'O', 'D', 'E', 0x20, 'D', 'O', 0x20, 'N', 'O', 'T', 0x20, 'T', 'O', 'U', 'C', 'H', '!', 0x03, 0x17};
   Serial.write(cal1_message, sizeof(cal1_message));
@@ -344,8 +344,6 @@ void loop()
     PC.write(pc_message, sizeof(pc_message));
     unsigned char measuring_message[14] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x03, 0x17};
     Serial.write(measuring_message, sizeof(measuring_message));
-    delay(1000);
-
     unsigned long WAIT_PRV_MILLIS = millis();
     while (1)
     {
@@ -393,7 +391,7 @@ void loop()
       {
         unsigned char fail_message[10] = {0x02, 0x19, 'E', 'R', 'R', 'O', 'R', 0x03, 0x17};
         Serial.write(fail_message, sizeof(fail_message));
-        delay(5000);
+        delay(3000);
         initFlag = 1;
         unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
         Serial.write(init_message, sizeof(init_message));
@@ -424,7 +422,7 @@ void loop()
         {
           unsigned char fail_message[10] = {0x02, 0x19, 'E', 'R', 'R', 'O', 'R', 0x03, 0x17};
           Serial.write(fail_message, sizeof(fail_message));
-          delay(5000);
+          delay(3000);
           initFlag = 1;
           unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
           Serial.write(init_message, sizeof(init_message));
