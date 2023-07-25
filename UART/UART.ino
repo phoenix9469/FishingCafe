@@ -110,7 +110,7 @@ void callibrateSequence()
   scale.tare();
   // Place known value-1.00kg
   // Don't touch...
-  unsigned char cal2_message[28] = {0x02, 0x19, 'P', 'L', 'A', 'C', 'E', 0x20, 'A', 0x20, 'W', 'E', 'I', 'G', 'H', 'T', 0x20, 0x20, '-', '0', '.', '0', '0', '0', 'K', 'G', 0x03, 0x17};
+  unsigned char cal2_message[28] = {0x02, 0x19, 'P', 'L', 'A', 'C', 'E', 0x20, 'A', 0x20, 'W', 'E', 'I', 'G', 'H', 'T', 0x20, 0x20, '=', '0', '.', '0', '0', '0', 'K', 'G', 0x03, 0x17};
   unsigned char weight_char[6];
   dtostrf(CAL_WEIGHT, 5, 3, weight_char);
   for (int i = 19; i < 24; i++)
@@ -233,6 +233,8 @@ void loop()
     {
       if (initFlag == 1)
       {
+        scale.set_scale(CAL_VALUE);
+        scale.tare();
         mcp.digitalWrite(USB_POWER, HIGH);
         initFlag = 0;
         rfidFlag = 0;
@@ -342,8 +344,8 @@ void loop()
     }
     PC.listen();
     PC.write(pc_message, sizeof(pc_message));
-    unsigned char measuring_message[14] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x03, 0x17};
-    Serial.write(measuring_message, sizeof(measuring_message));
+    //unsigned char measuring_message[14] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x03, 0x17};
+    //Serial.write(measuring_message, sizeof(measuring_message));
     unsigned long WAIT_PRV_MILLIS = millis();
     while (1)
     {
@@ -412,6 +414,8 @@ void loop()
       else if (weight_stbl == -1) // 실패
       {
         weight = averageMode(); // 재시도
+        unsigned char retry_mode_message[23] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 'A', 'V', 'G', 0x03, 0x17};
+        Serial.write(retry_mode_message, sizeof(retry_mode_message));
         if (weight != -1)       // 정상
         {
           unsigned char datareq_message[4] = {0x02, 0x12, 0x03, 0x17};
