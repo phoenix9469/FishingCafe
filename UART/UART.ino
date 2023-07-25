@@ -32,7 +32,7 @@ int NORM_TIMEOUT = 30;             // 안정화모드 타임아웃,초
 double TOLERANCE = 0.5;            // 안정화모드 무게 차이 허용치,KG
 int TOLERANCE_ALLOWABLE_VAL = 10;  // 안정화 되었다고 판단하는 허용치 내 데이터 개수
 double NET_WEIGHT = 0.3;           // 뜰채 무게,KG
-double CAL_WEIGHT = 0.163;           // 캘리브레이션 시 투입 무게
+double CAL_WEIGHT = 0.163;         // 캘리브레이션 시 투입 무게
 // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑USER_PARAM
 //---------------------------------------------------------
 
@@ -98,6 +98,46 @@ void motorControl()
   mcp.digitalWrite(MOTOR_CONTROL, LOW);
   delay(8000);
   mcp.digitalWrite(MOTOR_CONTROL, HIGH);
+}
+
+void calibrateSequence()
+{
+  unsigned char cal1_message[33] = {0x02, 0x19, 'C', 'A', 'L', 'L', 'I', 'B', 'R', 'A', 'T', 'E', 0x20, 'M', 'O', 'D', 'E', 0x20, 'D', 'O', 0x20, 'N', 'O', 'T', 0x20, 'T', 'O', 'U', 'C', 'H', '!', 0x03, 0x17};
+  Serial.write(cal1_message, sizeof(cal1_message));
+  delay(2500);
+  // Don't touch.
+  scale.set_scale();
+  scale.tare();
+  // Place known value-1.00kg
+  // Don't touch...
+  unsigned char cal2_message[28] = {0x02, 0x19, 'P', 'L', 'A', 'C', 'E', 0x20, 'A', 0x20, 'W', 'E', 'I', 'G', 'H', 'T', 0x20, 0x20, '-', '0', '.', '0', '0', '0', 'K', 'G', 0x03, 0x17};
+  unsigned char weight_char[6];
+  dtostrf(CAL_WEIGHT, 5, 3, weight_char);
+  for (int i = 19; i < 24; i++)
+  {
+    cal2_message[i] = weight_char[i - 19];
+  }
+  Serial.write(cal2_message, sizeof(cal2_message));
+  delay(5000);
+  for (int i = 5; i > 0; i--)
+  {
+    unsigned char cal3_message[5] = {0x02, 0x19, i + 48, 0x03, 0x17};
+    Serial.write(cal3_message, sizeof(cal3_message));
+    delay(1000);
+  }
+  float scale_cal_raw = scale.get_units(10);
+  CAL_VALUE = scale_cal_raw / CAL_WEIGHT;
+  // Finish
+  EEPROM.put(0, CAL_VALUE);
+  unsigned char cal_val_char[9];
+  dtostrf(CAL_VALUE, 8, 1, cal_val_char);
+  unsigned char cal4_message[28] = {0x02, 0x19, 'F', 'I', 'N', 'I', 'S', 'H', 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, '0', '0', '0', '0', '0', '0', '.', '0', 0x03, 0x17};
+  for (int i = 18; i < 26; i++)
+  {
+    cal4_message[i] = cal_val_char[i - 18];
+  }
+  Serial.write(cal4_message, sizeof(cal4_message));
+  delay(1500);
 }
 
 double averageMode()
@@ -227,28 +267,42 @@ void loop()
       {
         weight = weight - NET_WEIGHT;
       }
-      unsigned char weight_char[6];
-      dtostrf(weight, 5, 3, weight_char);
-      unsigned char clcd_message[11] = {0x02, 0x19, 0x00, 0x00, 0x00, 0x00, 0x00, 'K', 'G', 0x03, 0x17};
-      for (int i = 0; i < 5; i++)
+      if (weight < 0.05 || weight > 10.0) // 예외처리
       {
-        clcd_message[i + 2] = weight_char[i];
+        unsigned char rangeout_message[29] = {0x02, 0x19, 'E', 'R', 'R', 'O', 'R', 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 'R', 'A', 'N', 'G', 'E', 0x20, 'O', 'U', 'T', 0x03, 0x17};
+        Serial.write(rangeout_message, sizeof(rangeout_message));
+        unsigned char pc_message[22] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '|', '0', '.', '0', '0', '0', '|', '1', '|', '0', 0x0D, 0x0A}; // RFIDRFIDRF|0.000|0|0CRLF
+        PC.listen();
+        PC.write(pc_message, sizeof(pc_message));
+        for (int i = 0; i < 10; i++)
+        {
+          pc_message[i] = RFID_DATA[i];
+        }
       }
-      Serial.write(clcd_message, sizeof(clcd_message));
-      unsigned char pc_message[22] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '|', '0', '.', '0', '0', '0', '|', '0', '|', '0', 0x0D, 0x0A}; // RFIDRFIDRF|0.000|0|0CRLF
-      for (int i = 0; i < 10; i++)
+      else
       {
-        pc_message[i] = RFID_DATA[i];
+        unsigned char weight_char[6];
+        dtostrf(weight, 5, 3, weight_char);
+        unsigned char clcd_message[11] = {0x02, 0x19, '0', '.', '0', '0', '0', 'K', 'G', 0x03, 0x17};
+        for (int i = 0; i < 5; i++)
+        {
+          clcd_message[i + 2] = weight_char[i];
+        }
+        Serial.write(clcd_message, sizeof(clcd_message));
+        unsigned char pc_message[22] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '|', '0', '.', '0', '0', '0', '|', '0', '|', '0', 0x0D, 0x0A}; // RFIDRFIDRF|0.000|0|0CRLF
+        for (int i = 0; i < 10; i++)
+        {
+          pc_message[i] = RFID_DATA[i];
+        }
+        for (int i = 11; i < 16; i++)
+        {
+          pc_message[i] = weight_char[i - 11];
+        }
+        pc_message[19] = uart_buffer[3];
+        PC.listen();
+        PC.write(pc_message, sizeof(pc_message));
+        motorControl();
       }
-      for (int i = 11; i < 16; i++)
-      {
-        pc_message[i] = weight_char[i - 11];
-      }
-      pc_message[19] = uart_buffer[3];
-      PC.listen();
-      PC.write(pc_message, sizeof(pc_message));
-      motorControl();
-      mcp.digitalWrite(USB_POWER, HIGH);
       unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
       Serial.write(init_message, sizeof(init_message));
       initFlag = 1;
@@ -256,36 +310,10 @@ void loop()
 
     if (uart_buffer[1] == 0x14) // Calibrate
     {
-      unsigned char cal1_message[33] = {0x02, 0x19, 'C', 'A', 'L', 'L', 'I', 'B', 'R', 'A', 'T', 'E', 0x20, 'M', 'O', 'D', 'E', 0x20, 'D', 'O', 0x20, 'N', 'O', 'T', 0x20, 'T', 'O', 'U', 'C', 'H', '!', 0x03, 0x17};
-      Serial.write(cal1_message, sizeof(cal1_message));
-      delay(500);
-      // Don't touch.
-      scale.set_scale();
-      scale.tare();
-      // Place known value-1.00kg
-      // Don't touch...
-      unsigned char cal2_message[27] = {0x02, 0x19, 'P', 'L', 'A', 'C', 'E', 0x20, 'A', 0x20, 'W', 'E', 'I', 'G', 'H', 'T', 0x20, 0x20, '0', '.', '0', '0', '0', 'K', 'G', 0x03, 0x17};
-      unsigned char weight_char[6];
-      dtostrf(CAL_WEIGHT, 5, 3, weight_char);
-      for (int i = 18; i < 23; i++)
-      {
-        cal2_message[i] = weight_char[i - 18];
-      }
-      Serial.write(cal2_message, sizeof(cal2_message));
-      delay(5000);
-      for (int i = 5; i > 0; i--)
-      {
-        unsigned char cal3_message[5] = {0x02, 0x19, i + 48, 0x03, 0x17};
-        Serial.write(cal3_message, sizeof(cal3_message));
-        delay(1000);
-      }
-      float scale_cal_raw = scale.get_units(10);
-      CAL_VALUE = scale_cal_raw / CAL_WEIGHT;
-      // Finish
-      EEPROM.put(0, CAL_VALUE);
-      unsigned char cal4_message[35] = {0x02, 0x19, 'F', 'I', 'N', 'I', 'S', 'H', 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 'R', 'E', 'B', 'O', 'O', 'T', 0x20, 'M', 'A', 'N', 'U', 'A', 'L', 'L', 'Y', 0x03, 0x17};
-      Serial.write(cal4_message, sizeof(cal4_message));
+      calibrateSequence();
       initFlag = 1;
+      unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
+      Serial.write(init_message, sizeof(init_message));
       uart_buffer[30] = {0x00};
     }
 
