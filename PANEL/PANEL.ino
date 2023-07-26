@@ -55,7 +55,7 @@ unsigned long debounce_time = 0;
 void setup()
 {
   //---------------------------------------------------------------mcp.begin_I2C();
-  lcd.init();
+  lcd.begin();
   lcd.backlight();
   lcd.setCursor(0, 0);
   lcd.print("INIT...");
@@ -160,6 +160,7 @@ void buttonRead()
   /*
   if (mcp.digitalRead(NET_BTN) == LOW && millis() - debounce_time > 50)
   {
+    CAL_MODE_CNT++;
     if (NET_BTN_STATUS == 1)
     {
       NET_BTN_STATUS = 0;
@@ -199,6 +200,14 @@ void buttonRead()
 
   if (mcp.digitalRead(USER1_BTN) == LOW && millis() - debounce_time > 50)
   {
+    if (CAL_MODE_CNT >= 10)
+    {
+      BTN_LOCK = 1;
+      CAL_MODE_CNT = 0;
+      uart.listen();
+      unsigned char cal_message[4] = {0x02, 0x14, 0x03, 0x17};
+      uart.write(cal_message, sizeof(cal_message));
+    }
     if (USER1_BTN_STATUS == 1)
     {
       USER1_BTN_STATUS = 0;
@@ -304,12 +313,12 @@ void ledControl(unsigned char led_status)
   /*
   if (led_status == 0 || led_status == 1)
   {
-    mcp.digitalWrite(NET_LED, LOW);
-    mcp.digitalWrite(TARE_LED, LOW);
-    mcp.digitalWrite(USER1_LED, LOW);
-    mcp.digitalWrite(USER2_LED, LOW);
-    mcp.digitalWrite(USER3_LED, LOW);
-    mcp.digitalWrite(USER4_LED, LOW);
+    mcp.digitalWrite(NET_LED, led_status);
+    mcp.digitalWrite(TARE_LED, led_status);
+    mcp.digitalWrite(USER1_LED, led_status);
+    mcp.digitalWrite(USER2_LED, led_status);
+    mcp.digitalWrite(USER3_LED, led_status);
+    mcp.digitalWrite(USER4_LED, led_status);
   }
   else if (led_status == 2)
   {
