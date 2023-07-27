@@ -55,7 +55,7 @@ unsigned long debounce_time = 0;
 void setup()
 {
   //---------------------------------------------------------------mcp.begin_I2C();
-  lcd.begin();
+  lcd.init();
   lcd.backlight();
   lcd.setCursor(0, 0);
   lcd.print("INIT...");
