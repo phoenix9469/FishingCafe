@@ -344,8 +344,8 @@ void loop()
     }
     PC.listen();
     PC.write(pc_message, sizeof(pc_message));
-    //unsigned char measuring_message[14] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x03, 0x17};
-    //Serial.write(measuring_message, sizeof(measuring_message));
+    // unsigned char measuring_message[14] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x03, 0x17};
+    // Serial.write(measuring_message, sizeof(measuring_message));
     unsigned long WAIT_PRV_MILLIS = millis();
     while (1)
     {
@@ -393,6 +393,13 @@ void loop()
       {
         unsigned char fail_message[10] = {0x02, 0x19, 'E', 'R', 'R', 'O', 'R', 0x03, 0x17};
         Serial.write(fail_message, sizeof(fail_message));
+        unsigned char measure_err_message[22] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '|', '0', '.', '0', '0', '0', '|', '1', '|', '0', 0x0D, 0x0A}; // RFIDRFIDRF|0.000|1|0
+        for (int i = 0; i < 10; i++)
+        {
+          measure_err_message[i] = RFID_DATA[i];
+        }
+        PC.listen();
+        PC.write(measure_err_message, sizeof(measure_err_message));
         delay(3000);
         initFlag = 1;
         unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
@@ -416,7 +423,7 @@ void loop()
         weight = averageMode(); // 재시도
         unsigned char retry_mode_message[23] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 'A', 'V', 'G', 0x03, 0x17};
         Serial.write(retry_mode_message, sizeof(retry_mode_message));
-        if (weight != -1)       // 정상
+        if (weight != -1) // 정상
         {
           unsigned char datareq_message[4] = {0x02, 0x12, 0x03, 0x17};
           Serial.write(datareq_message, sizeof(datareq_message));
@@ -426,6 +433,13 @@ void loop()
         {
           unsigned char fail_message[10] = {0x02, 0x19, 'E', 'R', 'R', 'O', 'R', 0x03, 0x17};
           Serial.write(fail_message, sizeof(fail_message));
+          unsigned char measure_err_message[22] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '|', '0', '.', '0', '0', '0', '|', '1', '|', '0', 0x0D, 0x0A}; // RFIDRFIDRF|0.000|1|0
+          for (int i = 0; i < 10; i++)
+          {
+            measure_err_message[i] = RFID_DATA[i];
+          }
+          PC.listen();
+          PC.write(measure_err_message, sizeof(measure_err_message));
           delay(3000);
           initFlag = 1;
           unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
