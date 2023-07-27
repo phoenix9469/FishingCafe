@@ -3,8 +3,11 @@
     1. HX711 : https://github.com/bogde/HX711  
     2. MCP23X17 : https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library  
     3. Adafruit BusIO : https://github.com/adafruit/Adafruit_BusIO  
-    4. I2C LCD : https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library  
+    4. I2C LCD : https://github.com/johnrickman/LiquidCrystal_I2C
     5. SoftwareSerial.h, Wire.h
+
+You may use Xloader to upload HEX File to board.  
+https://github.com/binaryupdates/xLoader
 
 ### Main Device <-> Panel Protocol
 |STX|Command|Data|ETX|ETB|
