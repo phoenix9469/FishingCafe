@@ -5,13 +5,13 @@
 #include <EEPROM.h>
 // EEPROM 0:Callibrate Value
 
-//-----------------------------------------------IO PIN
+// GPIO
 #define HX711_DAT 4
 #define HX711_CLK 5
 #define PC_RX 8
 #define PC_TX 7
 #define RST_HWPIN 9
-//-----------------------------------------------MCP PIN
+// MCP23017 Pins
 #define SET 0
 #define BUZZER 1
 #define MOTOR_CONTROL 8
@@ -56,8 +56,7 @@ void setup()
   digitalWrite(RST_HWPIN, HIGH);
   delay(50);
   pinMode(RST_HWPIN, OUTPUT);
-
-  //---------------------------------------------------------------mcp.begin_I2C();
+  mcp.begin_I2C();
   mcp.pinMode(SET, OUTPUT);
   mcp.pinMode(BUZZER, OUTPUT);
   mcp.pinMode(BUTTON_2, INPUT_PULLUP);
@@ -85,9 +84,7 @@ void setup()
 
 void serialEvent()
 {
-  // digitalWrite(13, HIGH);
   Serial.readBytesUntil(0x17, uart_buffer, 30);
-  // Serial.write(uart_buffer, 20);
   UARTeventFlag = 1;
 }
 
@@ -96,8 +93,9 @@ void motorControl()
   mcp.digitalWrite(MOTOR_CONTROL, HIGH);
   delay(100);
   mcp.digitalWrite(MOTOR_CONTROL, LOW);
-  delay(8000);
+  delay(100);
   mcp.digitalWrite(MOTOR_CONTROL, HIGH);
+  delay(8000);
 }
 
 void callibrateSequence()
@@ -344,8 +342,6 @@ void loop()
     }
     PC.listen();
     PC.write(pc_message, sizeof(pc_message));
-    // unsigned char measuring_message[14] = {0x02, 0x19, 'M', 'E', 'A', 'S', 'U', 'R', 'I', 'N', 'G', 0x03, 0x17};
-    // Serial.write(measuring_message, sizeof(measuring_message));
     unsigned long WAIT_PRV_MILLIS = millis();
     while (1)
     {

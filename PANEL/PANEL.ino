@@ -44,6 +44,7 @@ unsigned char rfid_buffer[11] = {0x00};
 unsigned char TARE_BTN_VALUE = {0x00};
 unsigned char CAL_MODE_CNT = 0;
 unsigned long debounce_time = 0;
+
 void setup()
 {
   mcp.begin_I2C();
