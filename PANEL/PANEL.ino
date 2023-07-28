@@ -46,13 +46,13 @@ unsigned char CAL_MODE_CNT = 0;
 unsigned long debounce_time = 0;
 void setup()
 {
-  //---------------------------------------------------------------mcp.begin_I2C();
+  mcp.begin_I2C();
   lcd.init();
   lcd.backlight();
   lcd.setCursor(0, 0);
   lcd.print("INIT...");
   rfid.begin(9600);
-  rfid.setTimeout(20);
+  //rfid.setTimeout(20);필요한지 확인요망
   uart.begin(4800);
   Serial.begin(9600);
   Serial.println("INIT...");
@@ -69,14 +69,6 @@ void setup()
   mcp.pinMode(USER3_LED, OUTPUT);
   mcp.pinMode(USER4_BTN, INPUT_PULLUP);
   mcp.pinMode(USER4_LED, OUTPUT);
-  /*
-  pinMode(NET_BTN_TEST, INPUT_PULLUP);
-  pinMode(TARE_BTN_TEST, INPUT_PULLUP);
-  pinMode(USER1_BTN_TEST, INPUT_PULLUP);
-  pinMode(NET_LED_TEST, OUTPUT);
-  pinMode(TARE_LED_TEST, OUTPUT);
-  pinMode(USER1_LED_TEST, OUTPUT);
-  */
   ledControl(1);
   Serial.println("READY");
   lcd.clear();
@@ -87,67 +79,6 @@ void setup()
 
 void buttonRead()
 {
-//---------------------------------------------------------------
-  /*
-  if (digitalRead(NET_BTN_TEST) == LOW && millis() - debounce_time > 50)
-  {
-    CAL_MODE_CNT++;
-    if (NET_BTN_STATUS == 1)
-    {
-      NET_BTN_STATUS = 0;
-    }
-    else if (NET_BTN_STATUS == 0)
-    {
-      NET_BTN_STATUS = 1;
-    }
-    debounce_time = millis();
-    tone(BUZZER, 2680);
-    delay(200);
-  }
-
-  else if (digitalRead(TARE_BTN_TEST) == LOW && millis() - debounce_time > 50)
-  {
-    tone(BUZZER, 2680);
-    digitalWrite(TARE_LED_TEST, HIGH);
-    uart.listen();
-    unsigned char tare_message[4] = {0x02, 0x16, 0x03, 0x17};
-    uart.write(tare_message, sizeof(tare_message));
-    if (UARTstatus == 1)
-    {
-      rfid.listen();
-    }
-
-    delay(200);
-    digitalWrite(TARE_LED_TEST, LOW);
-  }
-
-  else if (digitalRead(USER1_BTN_TEST) == LOW && millis() - debounce_time > 50)
-  {
-    if (CAL_MODE_CNT >= 10)
-    {
-      BTN_LOCK = 1;
-      CAL_MODE_CNT = 0;
-      uart.listen();
-      unsigned char cal_message[4] = {0x02, 0x14, 0x03, 0x17};
-      uart.write(cal_message, sizeof(cal_message));
-    }
-    if (USER1_BTN_STATUS == 1)
-    {
-      USER1_BTN_STATUS = 0;
-    }
-    else if (USER1_BTN_STATUS == 0)
-    {
-      USER1_BTN_STATUS = 1;
-      USER2_BTN_STATUS = 0;
-      USER3_BTN_STATUS = 0;
-      USER4_BTN_STATUS = 0;
-    }
-    debounce_time = millis();
-    tone(BUZZER, 2680);
-    delay(200);
-  }
-    noTone(BUZZER);
-  */
   if (mcp.digitalRead(NET_BTN) == LOW && millis() - debounce_time > 50)
   {
     CAL_MODE_CNT++;
@@ -288,21 +219,6 @@ void buttonRead()
 
 void ledControl(unsigned char led_status)
 {
-  //---------------------------------------------------------------
-  /*
-  if (led_status == 0 || led_status == 1)
-  {
-    digitalWrite(NET_LED_TEST, led_status);
-    digitalWrite(TARE_LED_TEST, led_status);
-    digitalWrite(USER1_LED_TEST, led_status);
-  }
-  else if (led_status == 2)
-  {
-    digitalWrite(NET_LED_TEST, NET_BTN_STATUS);
-    digitalWrite(USER1_LED_TEST, USER1_BTN_STATUS);
-  }
-  
-  */
   if (led_status == 0 || led_status == 1)
   {
     mcp.digitalWrite(NET_LED, led_status);
@@ -335,7 +251,6 @@ void loop()
   {
     digitalWrite(LED_BUILTIN, HIGH);
     uart.readBytesUntil(0x17, uart_buffer, 35);
-    // Serial.write(uart_buffer, sizeof(uart_buffer));
     UARTeventFlag = 1;
   }
 
@@ -368,7 +283,7 @@ void loop()
     RFIDeventFlag = 0;
   }
 
-  if (UARTeventFlag == 1)
+  if (UARTeventFlag == 1) // MAIN 기기에서 통신 들어오면
   {
     if (uart_buffer[1] == 0x05) // INIT?
     {
@@ -471,10 +386,3 @@ void loop()
     UARTeventFlag = 0;
   }
 }
-
-// void serialEvent() {
-//   //digitalWrite(13,HIGH);
-//   Serial.readBytesUntil(0x04, uart_buffer,20);
-//   //Serial.write(uart_buffer,20);
-//   UARTeventFlag = 1;
-// }
