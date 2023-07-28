@@ -24,14 +24,6 @@
 #define USER4_BTN 12
 #define USER4_LED 13
 
-// Test Pin
-#define NET_BTN_TEST 10
-#define NET_LED_TEST 4
-#define TARE_BTN_TEST 11
-#define TARE_LED_TEST 7
-#define USER1_BTN_TEST 12
-#define USER1_LED_TEST 8
-
 Adafruit_MCP23X17 mcp;
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 SoftwareSerial rfid(RFID_RX, RFID_TX);
@@ -65,8 +57,6 @@ void setup()
   Serial.begin(9600);
   Serial.println("INIT...");
   pinMode(LED_BUILTIN, OUTPUT);
-  //---------------------------------------------------------------
-  /*
   mcp.pinMode(NET_BTN, INPUT_PULLUP);
   mcp.pinMode(NET_LED, OUTPUT);
   mcp.pinMode(TARE_BTN, INPUT_PULLUP);
@@ -79,14 +69,14 @@ void setup()
   mcp.pinMode(USER3_LED, OUTPUT);
   mcp.pinMode(USER4_BTN, INPUT_PULLUP);
   mcp.pinMode(USER4_LED, OUTPUT);
-  */
-  // Test
+  /*
   pinMode(NET_BTN_TEST, INPUT_PULLUP);
   pinMode(TARE_BTN_TEST, INPUT_PULLUP);
   pinMode(USER1_BTN_TEST, INPUT_PULLUP);
   pinMode(NET_LED_TEST, OUTPUT);
   pinMode(TARE_LED_TEST, OUTPUT);
   pinMode(USER1_LED_TEST, OUTPUT);
+  */
   ledControl(1);
   Serial.println("READY");
   lcd.clear();
@@ -97,7 +87,8 @@ void setup()
 
 void buttonRead()
 {
-
+//---------------------------------------------------------------
+  /*
   if (digitalRead(NET_BTN_TEST) == LOW && millis() - debounce_time > 50)
   {
     CAL_MODE_CNT++;
@@ -156,8 +147,7 @@ void buttonRead()
     delay(200);
   }
     noTone(BUZZER);
-  //---------------------------------------------------------------
-  /*
+  */
   if (mcp.digitalRead(NET_BTN) == LOW && millis() - debounce_time > 50)
   {
     CAL_MODE_CNT++;
@@ -293,11 +283,13 @@ void buttonRead()
   {
     noTone(BUZZER);
   }
-  */
+  
 }
 
 void ledControl(unsigned char led_status)
 {
+  //---------------------------------------------------------------
+  /*
   if (led_status == 0 || led_status == 1)
   {
     digitalWrite(NET_LED_TEST, led_status);
@@ -309,8 +301,8 @@ void ledControl(unsigned char led_status)
     digitalWrite(NET_LED_TEST, NET_BTN_STATUS);
     digitalWrite(USER1_LED_TEST, USER1_BTN_STATUS);
   }
-  //---------------------------------------------------------------
-  /*
+  
+  */
   if (led_status == 0 || led_status == 1)
   {
     mcp.digitalWrite(NET_LED, led_status);
@@ -328,7 +320,7 @@ void ledControl(unsigned char led_status)
     mcp.digitalWrite(USER3_LED, USER3_BTN_STATUS);
     mcp.digitalWrite(USER4_LED, USER4_BTN_STATUS);
   }
-  */
+  
 }
 
 void loop()
