@@ -32,7 +32,7 @@ int NORM_TIMEOUT = 30;             // 안정화모드 타임아웃,초
 double TOLERANCE = 0.5;            // 안정화모드 무게 차이 허용치,KG
 int TOLERANCE_ALLOWABLE_VAL = 10;  // 안정화 되었다고 판단하는 허용치 내 데이터 개수
 double NET_WEIGHT = 0.3;           // 뜰채 무게,KG
-double CAL_WEIGHT = 0.163;         // 캘리브레이션 시 투입 무게
+double CAL_WEIGHT = 0.410;         // 캘리브레이션 시 투입 무게
 // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑USER_PARAM
 //---------------------------------------------------------
 
@@ -93,8 +93,6 @@ void motorControl()
   mcp.digitalWrite(MOTOR_CONTROL, HIGH);
   delay(100);
   mcp.digitalWrite(MOTOR_CONTROL, LOW);
-  delay(100);
-  mcp.digitalWrite(MOTOR_CONTROL, HIGH);
   delay(8000);
 }
 
@@ -319,9 +317,9 @@ void loop()
 
     if (uart_buffer[1] == 0x16) // Tare
     {
-      scale.tare();
       mcp.digitalWrite(USB_POWER, LOW);
-      delay(200);
+      delay(1000);
+      scale.tare();
       mcp.digitalWrite(USB_POWER, HIGH);
       uart_buffer[30] = {0x00};
     }
