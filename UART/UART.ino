@@ -46,6 +46,7 @@ unsigned char RFID_DATA[10] = {0x00};
 unsigned char ETC_PARAM[5] = {0x00};
 float CAL_VALUE = 0.0;
 double weight = 0.0;
+unsigned long init_time = 0;
 
 Adafruit_MCP23X17 mcp;
 HX711 scale;
@@ -80,6 +81,7 @@ void setup()
   delay(3000);
   Serial.write(init_message, sizeof(init_message));
   initFlag = 1;
+  init_time = millis();
 }
 
 void serialEvent()
@@ -225,16 +227,24 @@ double stableMode()
 
 void loop()
 {
+  unsigned long loop_time = millis();
+  if (initFlag == 1 && loop_time - init_time >= 500) // Init 재송신
+  {
+    init_time = loop_time;
+    unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
+    Serial.write(init_message, sizeof(init_message));
+  }
+
   if (UARTeventFlag == 1)
   {
     if (uart_buffer[1] == 0x06) // ACK
     {
       if (initFlag == 1)
       {
+        initFlag = 0;
         scale.set_scale(CAL_VALUE);
         scale.tare();
         mcp.digitalWrite(USB_POWER, HIGH);
-        initFlag = 0;
         rfidFlag = 0;
         measureFlag = 0;
         measureEndFlag = 0;
@@ -306,6 +316,7 @@ void loop()
       unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
       Serial.write(init_message, sizeof(init_message));
       initFlag = 1;
+      init_time = millis();
     }
 
     if (uart_buffer[1] == 0x14) // Callibrate
@@ -315,6 +326,7 @@ void loop()
       unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
       Serial.write(init_message, sizeof(init_message));
       uart_buffer[30] = {0x00};
+      init_time = millis();
     }
 
     if (uart_buffer[1] == 0x16) // Tare
@@ -361,6 +373,7 @@ void loop()
         delay(5000);
         unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
         Serial.write(init_message, sizeof(init_message));
+        init_time = millis();
         break;
       }
 
@@ -400,6 +413,7 @@ void loop()
         initFlag = 1;
         unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
         Serial.write(init_message, sizeof(init_message));
+        init_time = millis();
       }
     }
     else if (mcp.digitalRead(SCALE_MODE) == HIGH) // 안정화 모드
@@ -440,6 +454,7 @@ void loop()
           initFlag = 1;
           unsigned char init_message[4] = {0x02, 0x05, 0x03, 0x17};
           Serial.write(init_message, sizeof(init_message));
+          init_time = millis();
         }
       }
     }
