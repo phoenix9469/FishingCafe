@@ -70,7 +70,7 @@ void setup()
   mcp.pinMode(USER3_LED, OUTPUT);
   mcp.pinMode(USER4_BTN, INPUT_PULLUP);
   mcp.pinMode(USER4_LED, OUTPUT);
-  ledControl(1);
+  //ledControl(1);
   Serial.println("READY");
   lcd.clear();
   uart.listen();
