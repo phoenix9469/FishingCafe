@@ -54,3 +54,6 @@ https://github.com/binaryupdates/xLoader
 |1|READY\|0\|0\|0|->|---|Ready|
 |2|5300205877\|0\|0\|0|->|---|RFID Data|
 |3|5300205877\|0.000\|1\|0|->|---|Error|
+
+### PCB Image
+![image](https://github.com/phoenix9469/FishingCafe/assets/82319443/ba9c5953-cb6e-43f0-b427-195fef2a58e1)
