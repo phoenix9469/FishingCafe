@@ -1,10 +1,20 @@
 # FishingCafe Scale Project
-- Required Library
+- Required Library(For 433 Scale)
     1. HX711 : https://github.com/bogde/HX711  
     2. MCP23X17 : https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library  
     3. Adafruit BusIO : https://github.com/adafruit/Adafruit_BusIO  
     4. I2C LCD : https://github.com/johnrickman/LiquidCrystal_I2C
     5. SoftwareSerial.h, Wire.h
+
+- Required Library(For ESP Scale)
+    1. NAU7802 : https://github.com/adafruit/Adafruit_NAU7802
+    2. MCP23X17 : https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library  
+    3. Adafruit BusIO : https://github.com/adafruit/Adafruit_BusIO  
+    4. I2C LCD : https://github.com/johnrickman/LiquidCrystal_I2C
+    5. PCF8563 : https://github.com/Bill2462/PCF8563-Arduino-Library
+    6. ArduinoJSON : https://github.com/bblanchon/ArduinoJson
+    7. ESPAsyncWebServer : https://github.com/me-no-dev/ESPAsyncWebServer
+    8. SoftwareSerial.h, Wire.h, FS.h, SD.h, WiFi.h
 
 You may use Xloader to upload HEX File to board.  
 https://github.com/binaryupdates/xLoader
