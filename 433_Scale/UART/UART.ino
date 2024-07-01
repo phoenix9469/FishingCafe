@@ -25,7 +25,7 @@
 
 //---------------------------------------------------------
 // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓USER_PARAM
-int INPUT_TIMEOUT = 10;            // 투입 타임아웃,초
+int INPUT_TIMEOUT = 15;            // 투입 타임아웃,초
 int AVERAGE_MODE_DATA_AMOUNT = 35; // 평균모드 데이터 개수,시간 계산법:35*2/10 = 7초
 int STBL_MODE_DATA_AMOUNT = 15;    // 안정화모드 데이터 개수,1Cycle당
 int NORM_TIMEOUT = 30;             // 안정화모드 타임아웃,초
@@ -280,12 +280,12 @@ void loop()
         unsigned char rangeout_message[29] = {0x02, 0x19, 'E', 'R', 'R', 'O', 'R', 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 'R', 'A', 'N', 'G', 'E', 0x20, 'O', 'U', 'T', 0x03, 0x17};
         Serial.write(rangeout_message, sizeof(rangeout_message));
         unsigned char pc_message[22] = {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '|', '0', '.', '0', '0', '0', '|', '1', '|', '0', 0x0D, 0x0A}; // RFIDRFIDRF|0.000|0|0CRLF
-        PC.listen();
-        PC.write(pc_message, sizeof(pc_message));
         for (int i = 0; i < 10; i++)
         {
           pc_message[i] = RFID_DATA[i];
         }
+        PC.listen();
+        PC.write(pc_message, sizeof(pc_message));
       }
       else
       {
