@@ -27,8 +27,6 @@ extern QueueHandle_t MenuTaskQueue;
 
 extern TaskHandle_t MenuTaskHandle;
 
-extern TaskHandle_t TestTaskHandle;
-
 extern bool Show_Loadcell_Value;
 
 extern bool ButtonBlock;
@@ -149,7 +147,7 @@ void button(unsigned char pin)
           USER4_BTN_STATUS = true;
           Serial2.end();
           Show_Loadcell_Value = false;
-          vTaskSuspend(TestTaskHandle);
+          //vTaskSuspend(TestTaskHandle);
           mcp.digitalWrite(LED_STRIP, LOW);
           mcp.digitalWrite(NET_LED, NET_BTN_STATUS);
           mcp.digitalWrite(TARE_LED, TARE_BTN_STATUS);
