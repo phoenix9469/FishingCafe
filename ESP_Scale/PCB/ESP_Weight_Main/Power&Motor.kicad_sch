@@ -1721,7 +1721,7 @@
     (pin "1" (uuid e313c549-33d6-4f3e-ab0d-79583629392e))
     (pin "2" (uuid 67e216dd-5cbd-42b0-b08a-1d3bf5faf1dd))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "R2") (unit 1)
         )
@@ -1747,7 +1747,7 @@
     (pin "1" (uuid 85eff3db-138e-4319-98fa-ef2bc25db503))
     (pin "2" (uuid fdce28b8-8db2-4e06-863b-9b9b279fc48b))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "J3") (unit 1)
         )
@@ -1773,7 +1773,7 @@
     (pin "2" (uuid 78a6128c-c223-4106-96af-09204892f8d3))
     (pin "1" (uuid 2114f2b7-0522-4fd3-abe5-80fb2106ecff))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "D1") (unit 1)
         )
@@ -1798,7 +1798,7 @@
     )
     (pin "1" (uuid 1ace8705-1466-40f4-b319-e5bf9013ff69))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0143") (unit 1)
         )
@@ -1823,7 +1823,7 @@
     )
     (pin "1" (uuid 40f77d57-e241-431e-bb16-6cde440336e5))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0121") (unit 1)
         )
@@ -1848,7 +1848,7 @@
     )
     (pin "1" (uuid 309682e8-2685-4123-a980-ecb01d24960a))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0125") (unit 1)
         )
@@ -1881,7 +1881,7 @@
     (pin "8" (uuid 132f1f9d-4265-40f8-a077-c074c2d7bc27))
     (pin "9" (uuid 2a9cbd3c-739d-4758-a957-0aaa878d2871))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "U2") (unit 1)
         )
@@ -1906,7 +1906,7 @@
     )
     (pin "1" (uuid 6d06ef27-bbfc-402e-9f21-b9c36d86ee85))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0126") (unit 1)
         )
@@ -1931,7 +1931,7 @@
     )
     (pin "1" (uuid 1e924dd9-e382-41a6-bd22-028eaeb652e5))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0127") (unit 1)
         )
@@ -1956,7 +1956,7 @@
     )
     (pin "1" (uuid dfed589f-f908-465f-8b40-75e1be1fa364))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "TP4") (unit 1)
         )
@@ -1981,7 +1981,7 @@
     )
     (pin "1" (uuid 01cc092d-afc8-4d62-9631-6066d83307fb))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "TP3") (unit 1)
         )
@@ -2006,7 +2006,7 @@
     )
     (pin "1" (uuid e514d87d-aa5d-4768-a4ca-bce1e8bd34bb))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0118") (unit 1)
         )
@@ -2033,7 +2033,7 @@
     (pin "3" (uuid fcb3e18a-e244-4a02-b0dc-ba10caee79dd))
     (pin "1" (uuid 448f44ca-4a07-49ae-a30f-6e601760333d))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "U1") (unit 1)
         )
@@ -2058,7 +2058,7 @@
     )
     (pin "1" (uuid 69580fc0-1f14-406d-bec6-358910162816))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0109") (unit 1)
         )
@@ -2083,7 +2083,7 @@
     )
     (pin "1" (uuid 1e276af5-1a9e-4d1b-a01d-692e17c2896f))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0111") (unit 1)
         )
@@ -2109,7 +2109,7 @@
     (pin "2" (uuid 92690223-c2c5-4957-a932-8702a7c7b25c))
     (pin "1" (uuid ecfeb7ad-fa4f-4696-9027-620ac17a6712))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C23") (unit 1)
         )
@@ -2135,7 +2135,7 @@
     (pin "1" (uuid b2705ddc-3067-4e60-9b3a-fc5cb28c0959))
     (pin "2" (uuid 5aaf81da-ee3f-4492-ab33-73c273d16627))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C24") (unit 1)
         )
@@ -2160,7 +2160,7 @@
     )
     (pin "1" (uuid 117f0027-1ad9-4f77-8612-9a43148612bb))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0130") (unit 1)
         )
@@ -2185,7 +2185,7 @@
     )
     (pin "1" (uuid f2ea6b77-04ff-4104-80c0-f36562dd6d56))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0131") (unit 1)
         )
@@ -2216,7 +2216,7 @@
     (pin "2" (uuid 1fef2f5d-8182-4226-9c35-843ca18700ef))
     (pin "1" (uuid 02737400-cded-43a8-ad6f-1f8eaef4ae56))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "U4") (unit 1)
         )
@@ -2244,7 +2244,7 @@
     (pin "4" (uuid c733d757-47a3-409b-9968-9285039efe05))
     (pin "2" (uuid ff1d58cd-186e-4211-9b53-8aac7a19896c))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "U6") (unit 1)
         )
@@ -2270,7 +2270,7 @@
     (pin "1" (uuid 25c5e263-86be-438e-8a82-3d9d723788c9))
     (pin "2" (uuid 82209514-0e80-4577-b4f8-87006d676903))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C9") (unit 1)
         )
@@ -2296,7 +2296,7 @@
     (pin "2" (uuid 8979371a-9797-45c7-8067-3db7517a92cc))
     (pin "1" (uuid 4c14c900-caa7-4f48-ae9a-599d28a9d2ec))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C7") (unit 1)
         )
@@ -2322,7 +2322,7 @@
     (pin "1" (uuid 906411e9-623f-4a55-8ab9-c8de1fa98d2a))
     (pin "2" (uuid 4116efbb-7244-45e8-9127-c6fb1497c960))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C4") (unit 1)
         )
@@ -2348,7 +2348,7 @@
     (pin "2" (uuid 55e6537d-2d05-4858-bb1c-e93d1e162d41))
     (pin "1" (uuid 2acb2923-dc85-4b0d-a6f2-4abac7ec7255))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C5") (unit 1)
         )
@@ -2374,7 +2374,7 @@
     (pin "1" (uuid e773ab25-d365-4cdf-aa30-409a7295dc06))
     (pin "2" (uuid ddda10d7-d0fa-4c42-8f00-aa6d70ecbc8b))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C3") (unit 1)
         )
@@ -2400,7 +2400,7 @@
     (pin "1" (uuid 2ab3abb7-e70e-43db-a333-00ab583769d0))
     (pin "2" (uuid d1863cab-b851-4c6a-8efb-aaa979569a80))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C8") (unit 1)
         )
@@ -2429,7 +2429,7 @@
     (pin "2" (uuid 0bdd9bf1-7839-4753-9642-f56eec1ac9ef))
     (pin "1" (uuid 1e38481c-b16e-4357-9526-d5ba8ceb6422))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "FB1") (unit 1)
         )
@@ -2458,7 +2458,7 @@
     (pin "1" (uuid f0c98874-fb90-4fdd-9b8b-70dd0bc1c4ea))
     (pin "2" (uuid 9eb20baa-e202-4017-b1be-966ace15a09d))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "FB3") (unit 1)
         )
@@ -2483,7 +2483,7 @@
     )
     (pin "1" (uuid 2d67ea8d-eed1-4b3f-ae14-ff9dc3181297))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0101") (unit 1)
         )
@@ -2508,7 +2508,7 @@
     )
     (pin "1" (uuid 63183218-7d2a-4541-ba3e-f7ad6c20328c))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0102") (unit 1)
         )
@@ -2533,7 +2533,7 @@
     )
     (pin "1" (uuid f6f1d93b-9a67-45a6-b75c-ed7fcbf42634))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0103") (unit 1)
         )
@@ -2562,7 +2562,7 @@
     (pin "2" (uuid bfcd03ad-e9e9-4909-a7b9-c611e63ba96d))
     (pin "1" (uuid d427f53a-4097-4434-b0e1-de3ff3a0568e))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "RV1") (unit 1)
         )
@@ -2587,7 +2587,7 @@
     )
     (pin "1" (uuid f48c5259-e6fc-4098-8a96-1ffa86d26100))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0104") (unit 1)
         )
@@ -2616,7 +2616,7 @@
     (pin "2" (uuid 43d99216-8286-407b-a154-846994e34cec))
     (pin "1" (uuid 07d6d72a-4845-427d-8325-584edb50e664))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "TH2") (unit 1)
         )
@@ -2641,7 +2641,7 @@
     )
     (pin "1" (uuid 7b7756c4-6ef7-4d5a-b8b6-1f707ee5b83e))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0105") (unit 1)
         )
@@ -2670,7 +2670,7 @@
     (pin "1" (uuid 0aa4be71-dd5f-46c1-940f-7427f47be4b0))
     (pin "2" (uuid 3cff31d4-ef88-4d27-a99e-26a63080a449))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "TH3") (unit 1)
         )
@@ -2696,7 +2696,7 @@
     (pin "1" (uuid 887d24de-705c-4f2d-b88e-2b2a1fc66579))
     (pin "2" (uuid 1b5b1659-79eb-4a15-9c68-0c2ab253aa41))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "R11") (unit 1)
         )
@@ -2722,7 +2722,7 @@
     (pin "1" (uuid 49cc60d8-3449-4fd9-9857-3d7e1324c5fc))
     (pin "2" (uuid 1afc9afd-f36b-42f0-886b-45742aa0beb4))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "R13") (unit 1)
         )
@@ -2747,7 +2747,7 @@
     )
     (pin "1" (uuid 3143d162-fce5-4ed7-b0a7-07a3fc60bfd6))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0106") (unit 1)
         )
@@ -2778,7 +2778,7 @@
     (pin "1" (uuid 8d43abfc-bd0a-460b-bcef-6d4fc13909e8))
     (pin "2" (uuid 3e03afef-3dcd-4597-ac06-6a9018be2969))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "U3") (unit 1)
         )
@@ -2809,7 +2809,7 @@
     (pin "4" (uuid 7c6fbd4b-c138-4133-89db-3d11701c5612))
     (pin "3" (uuid 10cc6a27-da4d-48b8-8d82-8df378bd1f10))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "U7") (unit 1)
         )
@@ -2835,7 +2835,7 @@
     (pin "2" (uuid 13f7dcdb-d511-4a6d-b24b-204e9e1b3f87))
     (pin "1" (uuid 39c221be-ab4d-41fc-bf19-3512b349787d))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "R14") (unit 1)
         )
@@ -2861,7 +2861,7 @@
     (pin "2" (uuid fca32784-72b0-439e-82d4-3cdfd57bede7))
     (pin "1" (uuid 0815cb36-628a-4a80-9ca7-4ff769303b59))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "R12") (unit 1)
         )
@@ -2886,7 +2886,7 @@
     )
     (pin "1" (uuid 2275162b-3971-4d80-9174-d2699c6ed559))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR0117") (unit 1)
         )
@@ -2916,7 +2916,7 @@
     (pin "MP" (uuid dc7a672c-75d2-49d1-b5f6-caf9e28c1a81))
     (pin "2" (uuid 242b7764-e967-44b7-ad6f-f935cc627f48))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "J1") (unit 1)
         )
@@ -2942,7 +2942,7 @@
     (pin "2" (uuid 76bc2755-d62a-4002-9b43-a8f9b5ee0b80))
     (pin "1" (uuid 2f2eb5a4-2ca2-4824-b1e5-146954a08b4a))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "JP3") (unit 1)
         )
@@ -2968,7 +2968,7 @@
     (pin "1" (uuid 5e03c24b-e288-49bb-a103-052295ed8da9))
     (pin "2" (uuid 944aaed9-cee3-4113-a372-6b5c6f6822bd))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C25") (unit 1)
         )
@@ -2993,7 +2993,7 @@
     )
     (pin "1" (uuid 7509ca69-92c9-4163-9481-b0e671f6032a))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR028") (unit 1)
         )
@@ -3018,7 +3018,7 @@
     )
     (pin "1" (uuid 93bd7957-3f24-463f-aa7d-00eef3dca8c8))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR07") (unit 1)
         )
@@ -3043,7 +3043,7 @@
     )
     (pin "1" (uuid 7e7bcc66-2fbc-47dd-809d-357b86d979a0))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR032") (unit 1)
         )
@@ -3068,7 +3068,7 @@
     )
     (pin "1" (uuid 6eefc57d-d506-4cdc-890b-58b1f22e7c3d))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR06") (unit 1)
         )
@@ -3100,7 +3100,7 @@
     (pin "5" (uuid 59086a45-53b3-4930-a23b-3602ecfde692))
     (pin "7" (uuid ac0cf3b6-2963-49cd-b048-5f020bf9e1d4))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "K1") (unit 1)
         )
@@ -3125,7 +3125,7 @@
     )
     (pin "1" (uuid f4d34b2d-f6e9-46e1-9610-7ddc2b39ddb7))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR029") (unit 1)
         )
@@ -3150,7 +3150,7 @@
     )
     (pin "1" (uuid faefe3c7-6032-40e3-b8b7-b4f8802fdca4))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR030") (unit 1)
         )
@@ -3175,7 +3175,7 @@
     )
     (pin "1" (uuid 3e989ccf-36f7-4a74-b3d0-83cc47b333c0))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR09") (unit 1)
         )
@@ -3200,7 +3200,7 @@
     )
     (pin "1" (uuid 40b0760c-c02e-430c-8475-04ea42cc648a))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR033") (unit 1)
         )
@@ -3225,7 +3225,7 @@
     )
     (pin "1" (uuid b1f8cf24-f5d2-45af-ba06-e4a048e0434b))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR031") (unit 1)
         )
@@ -3250,7 +3250,7 @@
     )
     (pin "1" (uuid 405103ab-061d-40cf-95ff-e07a130d2069))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "#PWR08") (unit 1)
         )
@@ -3279,7 +3279,7 @@
     (pin "2" (uuid 2593b6a5-3f01-4877-92fe-6b43e6d3c2c5))
     (pin "1" (uuid a37131ad-d0e9-4a7b-83d8-a1b7a8883e9f))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "C10") (unit 1)
         )
@@ -3305,7 +3305,7 @@
     (pin "1" (uuid 49400ed1-c2e6-4977-bd90-1ec7c72f78a3))
     (pin "2" (uuid 7fa7b86a-1646-40ff-8a4a-4d43b94a3f86))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "J6") (unit 1)
         )
@@ -3331,7 +3331,7 @@
     (pin "2" (uuid d892a602-1ed5-40e9-a3a9-3fb85253224a))
     (pin "1" (uuid 9a197675-f226-4275-aed8-c177ad712aa8))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1/00000000-0000-0000-0000-0000651a5340"
           (reference "F1") (unit 1)
         )

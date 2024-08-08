@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 44,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
@@ -71,7 +71,7 @@
     "zone_display_mode": 1
   },
   "meta": {
-    "filename": "Panel_board.kicad_prl",
+    "filename": "Panel_board_2.kicad_prl",
     "version": 3
   },
   "project": {
