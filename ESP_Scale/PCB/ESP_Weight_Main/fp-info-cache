@@ -1,4 +1,4 @@
-22947951031901198
+22954838373780594
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -61467,13 +61467,6 @@ THT
 4
 2
 Jumper
-SolderJumper-2_P1.3_THT
-
-
-0
-2
-2
-Jumper
 SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm
 SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 2 copper strips
 net tie solder jumper bridged
@@ -61803,6 +61796,13 @@ CUI_CPT-9019S-SMT
 2
 2
 KIcad
+C_Rect_L18.0mm_W7.5mm_P15.00mm_FKS3_FKP3
+C, Rect series, Radial, pin pitch=15.00mm, , length*width=18*7mm^2, Capacitor, http://www.wima.com/EN/WIMA_FKS_3.pdf
+C Rect series Radial pin pitch 15.00mm  length 18mm width 7mm Capacitor
+0
+2
+2
+KIcad
 CoaxialSwitch_Hirose_MS-156C3_Horizontal
 Subminiature Coaxial Switch 1.35mm High, DC to 11GHz
 Switch Coaxial RF
@@ -61900,6 +61900,13 @@ FIL_DLW5ATN331MQ2L
 0
 4
 4
+KIcad
+FQ-014
+Generic Buzzer, D12mm height 9.5mm with RM7.6mm
+buzzer
+0
+2
+2
 KIcad
 FUSC6127X269N
 0452
@@ -62279,6 +62286,13 @@ PSF-B
 24
 24
 KIcad
+PTF-77
+
+
+0
+2
+2
+KIcad
 Photoresistor
 
 
@@ -62636,6 +62650,13 @@ SX1276
 14
 13
 KIcad
+SolderJumper-2_P1.3_THT
+
+
+0
+2
+2
+KIcad
 Sparkfun_HX711
 
 
@@ -62852,6 +62873,13 @@ Wurth_Electronics-744031220-MFG
 0
 2
 2
+KIcad
+XTAL_ABS25-32.768KHZ-6-1-T
+
+
+0
+4
+4
 KIcad
 caution
 

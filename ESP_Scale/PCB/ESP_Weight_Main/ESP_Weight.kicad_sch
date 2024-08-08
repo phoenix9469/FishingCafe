@@ -676,149 +676,6 @@
         )
       )
     )
-    (symbol "Device:R_Pack04" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "RN" (at -7.62 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "R_Pack04" (at 5.08 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 6.985 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "R network parallel topology isolated" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "4 resistor network, parallel topology" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "DIP* SOIC* R*Array*Concave* R*Array*Convex*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_Pack04_0_1"
-        (rectangle (start -6.35 -2.413) (end 3.81 2.413)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (rectangle (start -5.715 1.905) (end -4.445 -1.905)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -3.175 1.905) (end -1.905 -1.905)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (rectangle (start -0.635 1.905) (end 0.635 -1.905)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -5.08 -2.54)
-            (xy -5.08 -1.905)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -5.08 1.905)
-            (xy -5.08 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.54 -2.54)
-            (xy -2.54 -1.905)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.54 1.905)
-            (xy -2.54 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 -2.54)
-            (xy 0 -1.905)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 1.905)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 -2.54)
-            (xy 2.54 -1.905)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 1.905)
-            (xy 2.54 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (rectangle (start 1.905 1.905) (end 3.175 -1.905)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_Pack04_1_1"
-        (pin passive line (at -5.08 -5.08 90) (length 2.54)
-          (name "R1.1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -2.54 -5.08 90) (length 2.54)
-          (name "R2.1" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -5.08 90) (length 2.54)
-          (name "R3.1" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 -5.08 90) (length 2.54)
-          (name "R4.1" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "R4.2" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 5.08 270) (length 2.54)
-          (name "R3.2" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -2.54 5.08 270) (length 2.54)
-          (name "R2.2" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at -5.08 5.08 270) (length 2.54)
-          (name "R1.2" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "Device:R_Small_US" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
       (property "Reference" "R" (at 0.762 0.508 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -1309,154 +1166,6 @@
         )
       )
     )
-    (symbol "Transistor_FET:AO3401A" (pin_names hide) (in_bom yes) (on_board yes)
-      (property "Reference" "Q" (at 5.08 1.905 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "AO3401A" (at 5.08 0 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0)
-        (effects (font (size 1.27 1.27) italic) (justify left) hide)
-      )
-      (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" (at 5.08 -3.81 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
-      )
-      (property "ki_keywords" "P-Channel MOSFET" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "AO3401A_0_1"
-        (polyline
-          (pts
-            (xy 0.254 0)
-            (xy -2.54 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.254 1.905)
-            (xy 0.254 -1.905)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 -1.27)
-            (xy 0.762 -2.286)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 0.508)
-            (xy 0.762 -0.508)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 2.286)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 2.54)
-            (xy 2.54 1.778)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 -2.54)
-            (xy 2.54 0)
-            (xy 0.762 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0.762 1.778)
-            (xy 3.302 1.778)
-            (xy 3.302 -1.778)
-            (xy 0.762 -1.778)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.286 0)
-            (xy 1.27 0.381)
-            (xy 1.27 -0.381)
-            (xy 2.286 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-        (polyline
-          (pts
-            (xy 2.794 -0.508)
-            (xy 2.921 -0.381)
-            (xy 3.683 -0.381)
-            (xy 3.81 -0.254)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 3.302 -0.381)
-            (xy 2.921 0.254)
-            (xy 3.683 0.254)
-            (xy 3.302 -0.381)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center 1.651 0) (radius 2.794)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (circle (center 2.54 -1.778) (radius 0.254)
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-        (circle (center 2.54 1.778) (radius 0.254)
-          (stroke (width 0) (type default))
-          (fill (type outline))
-        )
-      )
-      (symbol "AO3401A_1_1"
-        (pin input line (at -5.08 0 0) (length 2.54)
-          (name "G" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 -5.08 90) (length 2.54)
-          (name "S" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "D" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -1607,10 +1316,7 @@
     (uuid 0f162dfc-dc83-4f49-b0d5-8f4e1cde1f46)
   )
   (junction (at 218.44 134.62) (diameter 0) (color 0 0 0 0)
-    (uuid 0fde2d70-34ad-45c0-82f2-09e7ea576d4d)
-  )
-  (junction (at 222.25 106.68) (diameter 0) (color 0 0 0 0)
-    (uuid 14a60091-94cf-4933-becd-24c975bb725a)
+    (uuid 47a90452-4801-43be-b10f-4a6610b9e92d)
   )
   (junction (at 43.18 40.64) (diameter 0) (color 0 0 0 0)
     (uuid 5e15f782-1007-4f18-a022-24cde7bcc80d)
@@ -1620,15 +1326,6 @@
   )
   (junction (at 162.56 63.5) (diameter 0) (color 0 0 0 0)
     (uuid 784bb99f-ad79-4c99-84ac-60c860700978)
-  )
-  (junction (at 222.25 109.22) (diameter 0) (color 0 0 0 0)
-    (uuid 7c57a090-edb7-4fc8-aca0-f753d5038785)
-  )
-  (junction (at 208.28 134.62) (diameter 0) (color 0 0 0 0)
-    (uuid 8ee08de1-171b-4d13-ab64-71938c940316)
-  )
-  (junction (at 222.25 111.76) (diameter 0) (color 0 0 0 0)
-    (uuid 94434c69-f625-494e-b213-62e69920afa6)
   )
   (junction (at 119.38 170.18) (diameter 0) (color 0 0 0 0)
     (uuid ad336548-230b-4880-8421-f000c8d37a66)
@@ -1670,29 +1367,13 @@
     (stroke (width 0) (type default))
     (uuid 27f43754-5814-4e8b-8c56-89d049f0fe00)
   )
-  (wire (pts (xy 208.28 133.35) (xy 208.28 134.62))
-    (stroke (width 0) (type default))
-    (uuid 2e42e761-44bc-4da7-b66a-61e88ba75a9c)
-  )
-  (wire (pts (xy 208.28 127) (xy 213.36 127))
-    (stroke (width 0) (type default))
-    (uuid 3770e7b0-99e7-4182-8834-94db229fa8fd)
-  )
   (wire (pts (xy 254 34.29) (xy 260.35 34.29))
     (stroke (width 0) (type default))
     (uuid 37debc07-2697-4f44-a3e6-5d6dd035ac5b)
   )
-  (wire (pts (xy 222.25 109.22) (xy 222.25 111.76))
-    (stroke (width 0) (type default))
-    (uuid 3e1791ec-f8e5-4a13-9d7e-08e4790809f8)
-  )
   (wire (pts (xy 55.88 48.26) (xy 34.29 48.26))
     (stroke (width 0) (type default))
     (uuid 451c5456-1781-4caf-935b-a889437066e0)
-  )
-  (wire (pts (xy 222.25 111.76) (xy 222.25 114.3))
-    (stroke (width 0) (type default))
-    (uuid 48667cad-2925-4390-a3ae-6db9bc26cba9)
   )
   (wire (pts (xy 115.57 170.18) (xy 119.38 170.18))
     (stroke (width 0) (type default))
@@ -1754,10 +1435,6 @@
     (stroke (width 0) (type default))
     (uuid dd6f736a-c536-46f6-9f6b-aece00019ad7)
   )
-  (wire (pts (xy 222.25 106.68) (xy 222.25 109.22))
-    (stroke (width 0) (type default))
-    (uuid e3f88279-ac96-4d11-8b25-a6c8c1dc22ac)
-  )
   (wire (pts (xy 237.49 24.13) (xy 260.35 24.13))
     (stroke (width 0) (type default))
     (uuid efb36d29-bcb6-4273-8ea2-cb0be775cf91)
@@ -1765,10 +1442,6 @@
   (wire (pts (xy 34.29 50.8) (xy 55.88 50.8))
     (stroke (width 0) (type default))
     (uuid f9dbb451-7987-4b4b-8d2b-a0850dcadef1)
-  )
-  (wire (pts (xy 208.28 128.27) (xy 208.28 127))
-    (stroke (width 0) (type default))
-    (uuid fa0985d7-ae5e-4652-96b4-eb2d0f043cb2)
   )
 
   (label "EN" (at 137.16 73.66 180) (fields_autoplaced)
@@ -1814,10 +1487,6 @@
   (label "TX" (at 167.64 101.6 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3da33f66-c168-460f-a6ae-ea9bb65f1681)
-  )
-  (label "SD_CLK" (at 232.41 111.76 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 3eb18881-5a77-45db-b61c-164a713a6342)
   )
   (label "SDA" (at 140.97 177.8 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1879,10 +1548,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 87a4b681-e57c-4502-84a3-c94f54849f3b)
   )
-  (label "SD_CS" (at 232.41 106.68 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 8e34ca62-e026-4ba0-938a-99c439d22c03)
-  )
   (label "IO0" (at 110.49 119.38 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 96965948-4c70-4cc5-88f0-67fc02d7d105)
@@ -1895,10 +1560,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a3227bcc-edf1-481a-83d4-1a6988b87f09)
   )
-  (label "SD_PWR" (at 167.64 127 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid a526e489-dd11-4788-907f-cc9f93021f04)
-  )
   (label "STATUS_1" (at 270.51 29.21 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b19a8807-1f14-4fde-9804-9c3c88831a15)
@@ -1906,10 +1567,6 @@
   (label "SCL" (at 158.75 168.91 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid b2530866-6a39-4686-adbb-74ad61fe1c19)
-  )
-  (label "SD_PWR" (at 208.28 127 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid b6c2c4d1-7265-46c9-95ee-1a5023cef06d)
   )
   (label "RX_DEBUG" (at 167.64 81.28 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1951,10 +1608,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d9329999-377a-48e0-828c-d0d75eccc718)
   )
-  (label "SD_MISO" (at 232.41 114.3 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid dfd72dde-c5b5-4161-adac-223e3b50fab6)
-  )
   (label "SD_MOSI" (at 167.64 114.3 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e16b5257-9cb5-4e58-bde1-3b9835ab80cf)
@@ -1970,10 +1623,6 @@
   (label "M2" (at 34.29 22.86 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e7f5d7ff-811e-442f-be7d-748397c90b7d)
-  )
-  (label "SD_MOSI" (at 232.41 109.22 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid fd0c56de-a73b-45b7-a9eb-be4624d7d11a)
   )
   (label "M1" (at 167.64 116.84 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2038,7 +1687,7 @@
     (pin "8" (uuid be1d2ff8-7eaa-4341-b592-558d0ff91d09))
     (pin "5" (uuid 09cffadd-5e70-4730-8df2-f0db37c19d33))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "U5") (unit 1)
         )
@@ -2064,7 +1713,7 @@
     (pin "1" (uuid 46dde8d4-5aec-4986-9178-fdba3cc7b801))
     (pin "2" (uuid 97f4e51f-390b-4f56-bc8b-78b6c789b074))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "R9") (unit 1)
         )
@@ -2090,7 +1739,7 @@
     (pin "1" (uuid a5b4c87f-2f1e-4b92-ad17-97be0e66b4b1))
     (pin "2" (uuid 82a6aaeb-d327-479c-91a8-2b8774806d6f))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "C6") (unit 1)
         )
@@ -2118,7 +1767,7 @@
     (pin "3" (uuid 4008f76d-c1f6-485b-9e5b-a35eeaea05db))
     (pin "4" (uuid 2d0e4398-aff3-4215-b7e5-909901a8e913))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "J9") (unit 1)
         )
@@ -2143,7 +1792,7 @@
     )
     (pin "1" (uuid 2bc47505-be52-45a4-998c-dd04a0203485))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0132") (unit 1)
         )
@@ -2168,7 +1817,7 @@
     )
     (pin "1" (uuid 890376ee-4b8c-4f37-947a-fd2d03759ddd))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0135") (unit 1)
         )
@@ -2185,14 +1834,14 @@
     (property "Value" "MountingHole_Pad" (at 20.32 176.3268 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 17.78 175.26 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 17.78 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 17.78 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "H2") (unit 1)
         )
@@ -2209,14 +1858,14 @@
     (property "Value" "MountingHole_Pad" (at 44.45 176.3268 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 41.91 175.26 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 41.91 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 41.91 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "H3") (unit 1)
         )
@@ -2233,14 +1882,14 @@
     (property "Value" "MountingHole_Pad" (at 44.45 189.0268 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 41.91 187.96 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 41.91 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 41.91 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "H4") (unit 1)
         )
@@ -2257,14 +1906,14 @@
     (property "Value" "MountingHole_Pad" (at 20.32 189.0268 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 17.78 187.96 0)
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 17.78 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 17.78 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "H1") (unit 1)
         )
@@ -2289,7 +1938,7 @@
     )
     (pin "1" (uuid a8f19b84-1e15-4cf6-86f6-8bd7a1a99241))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0107") (unit 1)
         )
@@ -2315,7 +1964,7 @@
     (pin "2" (uuid 48244303-337d-42ac-a76e-e3770328bda7))
     (pin "1" (uuid 6c9db36b-90c0-4c1a-afea-79107d1c92cd))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "C1") (unit 1)
         )
@@ -2341,7 +1990,7 @@
     (pin "2" (uuid 4d7b3790-48c4-4180-a1cb-1ed46d71c342))
     (pin "1" (uuid 37c67c73-60e2-4e55-90b3-f7ea72b2bed7))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "C2") (unit 1)
         )
@@ -2366,7 +2015,7 @@
     )
     (pin "1" (uuid b0cda47d-9bb5-41d6-b109-c286866e21df))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "TP1") (unit 1)
         )
@@ -2391,7 +2040,7 @@
     )
     (pin "1" (uuid b26e268e-beec-4175-98e2-4c4ef8088c76))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0119") (unit 1)
         )
@@ -2416,7 +2065,7 @@
     )
     (pin "1" (uuid 4f14dd17-99b7-4947-8610-138d7273d465))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "TP2") (unit 1)
         )
@@ -2433,7 +2082,7 @@
     (property "Value" "IO0" (at 111.7092 123.063 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Jumper:SolderJumper-2_P1.3_THT" (at 110.49 121.92 0)
+    (property "Footprint" "KIcad:SolderJumper-2_P1.3_THT" (at 110.49 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 110.49 121.92 0)
@@ -2442,7 +2091,7 @@
     (pin "2" (uuid 89b5b579-a658-46f1-8a09-89c647fa51f3))
     (pin "1" (uuid 00114447-49a2-47ab-8f12-c1276d8c0aa2))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "JP1") (unit 1)
         )
@@ -2459,7 +2108,7 @@
     (property "Value" "EN" (at 120.5992 123.063 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Jumper:SolderJumper-2_P1.3_THT" (at 119.38 121.92 0)
+    (property "Footprint" "KIcad:SolderJumper-2_P1.3_THT" (at 119.38 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 119.38 121.92 0)
@@ -2468,7 +2117,7 @@
     (pin "2" (uuid fb8b1fd5-767b-4155-b6f8-bb6bc7467d71))
     (pin "1" (uuid 53449a4e-95a6-47f0-8c4f-48e27a7c83c1))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "JP2") (unit 1)
         )
@@ -2493,7 +2142,7 @@
     )
     (pin "1" (uuid f9510b88-ef9b-4cac-9a8e-53e23932c01a))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0124") (unit 1)
         )
@@ -2518,7 +2167,7 @@
     )
     (pin "1" (uuid 3c554e74-5feb-4ec6-90ff-41698df02da0))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0128") (unit 1)
         )
@@ -2544,7 +2193,7 @@
     (pin "2" (uuid 20742a96-118c-4428-b5f8-2c32c8f37294))
     (pin "1" (uuid 420e8b5b-0710-471b-ab1a-b95937a5ff46))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "R17") (unit 1)
         )
@@ -2569,7 +2218,7 @@
     )
     (pin "1" (uuid e968b8fc-da44-4c57-9ae9-046048f99b51))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0110") (unit 1)
         )
@@ -2594,7 +2243,7 @@
     )
     (pin "1" (uuid a576ab15-8336-4f14-aa1d-5af69832f9dd))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR0113") (unit 1)
         )
@@ -2619,7 +2268,7 @@
     )
     (pin "1" (uuid 6492137a-8e63-4b36-aac2-cdbd1504e8b9))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR01") (unit 1)
         )
@@ -2645,7 +2294,7 @@
     (pin "1" (uuid bbfafe2c-93cc-4208-a897-a4e1754fc46d))
     (pin "2" (uuid 8603411f-f21a-429d-a82a-23392c6052c0))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "R15") (unit 1)
         )
@@ -2670,7 +2319,7 @@
     )
     (pin "1" (uuid e408557e-2dce-418c-919a-835d2e273bdd))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR018") (unit 1)
         )
@@ -2695,7 +2344,7 @@
     )
     (pin "1" (uuid 505adf23-c402-405b-abec-2cb664bba8b7))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR010") (unit 1)
         )
@@ -2721,7 +2370,7 @@
     (pin "1" (uuid 758e55b9-c1f9-44bb-9a77-2a6da77d9a40))
     (pin "2" (uuid f414803c-644b-404f-9291-0e6bd6ccd768))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "C27") (unit 1)
         )
@@ -2751,34 +2400,9 @@
     (pin "6" (uuid 74d72843-ccec-41d5-b61d-cc0cff84bd94))
     (pin "2" (uuid 3bc1093a-43d2-417d-81d7-c61ac8853b05))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "D4") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 222.25 106.68 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 2d8f632c-fe98-46a0-b6ab-c0ba01c02ce2)
-    (property "Reference" "#PWR022" (at 226.06 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 218.44 106.68 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 222.25 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 222.25 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6b7ac9c3-bb46-4c1e-80c1-0f55951bd540))
-    (instances
-      (project "ESP_Weight"
-        (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
-          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -2801,7 +2425,7 @@
     )
     (pin "1" (uuid 0b96ed74-d606-4ead-a8ec-fdb11c066260))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR019") (unit 1)
         )
@@ -2826,7 +2450,7 @@
     )
     (pin "1" (uuid 55852599-772b-48fb-85ee-99bef332b137))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR020") (unit 1)
         )
@@ -2851,7 +2475,7 @@
     )
     (pin "1" (uuid a66a367b-08bb-4ac7-bae0-ad35e37af623))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR024") (unit 1)
         )
@@ -2889,7 +2513,7 @@
     (pin "2" (uuid 5eae3fc3-0c4a-46d2-98f2-192484cd9361))
     (pin "9" (uuid 38c11b95-b460-4d83-9f6e-f0a5d62fdfe4))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "J5") (unit 1)
         )
@@ -2897,24 +2521,24 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 208.28 134.62 90) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 218.44 134.62 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 42b16208-e748-40c4-b462-2fbef484273f)
-    (property "Reference" "#PWR016" (at 212.09 134.62 0)
+    (property "Reference" "#PWR016" (at 222.25 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (at 204.47 134.62 90)
+    (property "Value" "+3.3V" (at 214.63 134.62 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 208.28 134.62 0)
+    (property "Footprint" "" (at 218.44 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 208.28 134.62 0)
+    (property "Datasheet" "" (at 218.44 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e801fd16-2f8b-4aaf-9ce1-836b29d0abda))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR016") (unit 1)
         )
@@ -2939,7 +2563,7 @@
     )
     (pin "1" (uuid c2752ada-edab-4220-a46e-932f670b82f7))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR026") (unit 1)
         )
@@ -2968,7 +2592,7 @@
     (pin "2" (uuid 834fe50f-c04a-474a-ba7f-422694e8d108))
     (pin "1" (uuid ac6913a6-587b-4c42-a240-033c914b2d3f))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "J8") (unit 1)
         )
@@ -2994,7 +2618,7 @@
     (pin "2" (uuid 924b0816-b24a-48a0-9bcf-d03b050916da))
     (pin "1" (uuid 8673f7d5-5c7a-4e80-9d23-0b53b34d4403))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "C26") (unit 1)
         )
@@ -3020,7 +2644,7 @@
     (pin "1" (uuid 94c2f66f-fcf7-472a-aa5b-ae758225609b))
     (pin "2" (uuid 58a1ee65-8e12-44cd-a8c0-319ef8f016bf))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "R16") (unit 1)
         )
@@ -3049,7 +2673,7 @@
     (pin "1" (uuid be6b688d-236a-4de3-b5b5-e1f693b44a30))
     (pin "2" (uuid 3e160278-2878-4eaf-a33f-85072ece1e2e))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "Y1") (unit 1)
         )
@@ -3078,7 +2702,7 @@
     (pin "1" (uuid 57ddb37a-c299-475b-88b9-da8e557f6044))
     (pin "2" (uuid e0649e59-8876-49cf-904c-60340e44c060))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "SW1") (unit 1)
         )
@@ -3103,7 +2727,7 @@
     )
     (pin "1" (uuid d27bdaa7-a33b-484a-a92d-f105b584e73e))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "TP7") (unit 1)
         )
@@ -3128,7 +2752,7 @@
     )
     (pin "1" (uuid 92615641-1890-40f3-bc53-a211fa330527))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR023") (unit 1)
         )
@@ -3153,7 +2777,7 @@
     )
     (pin "1" (uuid 2c342b1b-e2eb-4e5d-ad75-694a8b39035e))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR021") (unit 1)
         )
@@ -3178,7 +2802,7 @@
     )
     (pin "1" (uuid dc927450-379f-4d4b-975e-87b585b8da45))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR05") (unit 1)
         )
@@ -3203,7 +2827,7 @@
     )
     (pin "1" (uuid 4ca56c23-3439-4f66-91ee-9e6c00dc39be))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR03") (unit 1)
         )
@@ -3228,7 +2852,7 @@
     )
     (pin "1" (uuid d4ddeddc-7a15-490d-b671-c087e28f3df2))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR027") (unit 1)
         )
@@ -3253,7 +2877,7 @@
     )
     (pin "1" (uuid 792c253e-6469-406d-85bc-023700f36ada))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "TP8") (unit 1)
         )
@@ -3285,7 +2909,7 @@
     (pin "2" (uuid 51c1ae12-8283-438d-a89c-c261dea19fbc))
     (pin "1" (uuid ca082e68-57a7-41e6-aa5e-c87c3efd231d))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "D2") (unit 1)
         )
@@ -3311,7 +2935,7 @@
     (pin "2" (uuid 7bd14931-b685-46db-8bc9-f83739946513))
     (pin "1" (uuid fa6b948a-99e8-4991-b942-6c84bc68394a))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "R19") (unit 1)
         )
@@ -3336,35 +2960,9 @@
     )
     (pin "1" (uuid c3ccb845-9a01-4ccc-8de9-e61a4356f102))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR017") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Small_US") (at 208.28 130.81 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b2badc27-34d4-438b-a177-2fe2d5d248fc)
-    (property "Reference" "R18" (at 205.74 129.54 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "10k" (at 205.74 132.08 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 208.28 130.81 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 208.28 130.81 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 2c2d7703-d66e-4cf3-87be-aca39c89ac0b))
-    (pin "1" (uuid f8af1111-1fb5-43f4-b0ca-3de1c73a6612))
-    (instances
-      (project "ESP_Weight"
-        (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
-          (reference "R18") (unit 1)
         )
       )
     )
@@ -3387,7 +2985,7 @@
     )
     (pin "1" (uuid 1c6fc2be-af1b-423d-a71e-adcf0ccd6353))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR02") (unit 1)
         )
@@ -3412,7 +3010,7 @@
     )
     (pin "1" (uuid 78c2ec12-41d5-4c13-baf0-27d54d783794))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR04") (unit 1)
         )
@@ -3437,7 +3035,7 @@
     )
     (pin "1" (uuid 5b371709-20c7-4cf1-8a39-60a0687a276d))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR012") (unit 1)
         )
@@ -3469,7 +3067,7 @@
     (pin "2" (uuid 25df1bd4-f84a-4994-b52f-63cdd4a4cbed))
     (pin "1" (uuid 436d83b9-ed4d-48dc-8933-2c9e352e4e01))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "D3") (unit 1)
         )
@@ -3494,41 +3092,9 @@
     )
     (pin "1" (uuid 3a5f75d3-d9ca-4848-8008-0e4aac30e549))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR011") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R_Pack04") (at 227.33 109.22 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d3c9788a-0c1d-434c-bb5c-df45289b60e1)
-    (property "Reference" "RN1" (at 227.33 100.33 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "10k" (at 227.33 102.87 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_Cat16-4" (at 227.33 102.235 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 227.33 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "7" (uuid 366e0155-d0c0-4ff6-bf75-636ea6f7c767))
-    (pin "3" (uuid ce687b09-d944-45f7-9bfe-f551a2abd280))
-    (pin "1" (uuid 3d33789c-d16f-4c6b-bd70-72eb8fb00d21))
-    (pin "5" (uuid 468e2f80-bd01-4669-8dce-5d0878d4706f))
-    (pin "2" (uuid 0fff2cbe-49c9-452b-9ede-ac6f91dbbc80))
-    (pin "4" (uuid 12be54fe-505b-4bba-ab4b-2227a3dacfa3))
-    (pin "6" (uuid 6ae83766-89cc-4645-9137-45d8cae6eb22))
-    (pin "8" (uuid 7b0a09ad-ae47-4f33-a283-e28106478e73))
-    (instances
-      (project "ESP_Weight"
-        (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
-          (reference "RN1") (unit 1)
         )
       )
     )
@@ -3551,7 +3117,7 @@
     )
     (pin "1" (uuid acf8cd1e-f45b-44e5-b002-6d4c72dd511e))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR014") (unit 1)
         )
@@ -3576,7 +3142,7 @@
     )
     (pin "1" (uuid 40de2f61-a3d3-464f-ad01-4620440608ff))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR015") (unit 1)
         )
@@ -3601,7 +3167,7 @@
     )
     (pin "1" (uuid 2eadce86-8e79-4e0e-bc72-b40dffd9ef82))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR013") (unit 1)
         )
@@ -3626,7 +3192,7 @@
     )
     (pin "1" (uuid 7362c29e-a3c0-4827-9cae-a0e92739e647))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "#PWR025") (unit 1)
         )
@@ -3652,36 +3218,9 @@
     (pin "2" (uuid f01a1db3-543a-4f16-aa41-b975fd88be94))
     (pin "1" (uuid dae6be8f-af22-4400-a0cc-b65d0144ed53))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "C28") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Transistor_FET:AO3401A") (at 213.36 132.08 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid efa066eb-40dd-47b9-8e8e-0229ba610464)
-    (property "Reference" "Q1" (at 213.36 138.43 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "BS250" (at 213.36 140.97 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 211.455 137.16 0)
-      (effects (font (size 1.27 1.27) italic) (justify left) hide)
-    )
-    (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" (at 209.55 137.16 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (pin "2" (uuid 57ccd1aa-a934-4266-a42a-3356d4c87bf1))
-    (pin "3" (uuid aaeece36-2e8c-400c-bd15-c7b1d416ee6c))
-    (pin "1" (uuid 6ab62fb8-5115-4a27-9626-85bb8cf2e7ca))
-    (instances
-      (project "ESP_Weight"
-        (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
-          (reference "Q1") (unit 1)
         )
       )
     )
@@ -3711,7 +3250,7 @@
     (pin "8" (uuid ec274efa-f0a0-4131-8e48-4168fc8d125c))
     (pin "2" (uuid 1940d930-83a8-46aa-a7af-e3d97b69ba5f))
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1"
           (reference "U16") (unit 1)
         )
@@ -3762,7 +3301,7 @@
       (uuid 31178e8e-df61-43fd-84be-0eeede89eb3f)
     )
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1" (page "2"))
       )
     )
@@ -3831,7 +3370,7 @@
       (uuid f5c64e7f-845f-4e18-b0d7-b5e97f0b9ccf)
     )
     (instances
-      (project "ESP_Weight"
+      (project "ESP_Weight_2"
         (path "/c30e6a97-e810-4ab4-a193-e720f6746db1" (page "3"))
       )
     )
