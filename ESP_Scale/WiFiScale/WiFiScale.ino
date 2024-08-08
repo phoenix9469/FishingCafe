@@ -61,6 +61,7 @@ QueueHandle_t PingTaskQueue;
 TaskHandle_t WifiLEDTaskHandle = NULL;
 TaskHandle_t MenuTaskHandle = NULL;
 TaskHandle_t PingTaskHandle = NULL;
+TaskHandle_t TestTaskHandle = NULL;
 
 hw_timer_t *timer_0 = NULL;
 portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
@@ -95,6 +96,8 @@ bool wifi_enable = false;
 bool wifi_retry = true;
 bool SD_Status = 0;
 unsigned char Ping_Fail_Cnt = 0;
+
+bool Show_Loadcell_Value = false;
 
 unsigned char rfid_buffer[13] = {0x00};
 
@@ -610,6 +613,8 @@ int scale_init()
   lcd.setCursor(0, 0);
   lcd.print("READY!!!");
   ButtonBlock = false;
+  Show_Loadcell_Value = true;
+  vTaskResume(TestTaskHandle);
   return 0;
 }
 
@@ -944,6 +949,23 @@ void MenuTask(void *pvParameters)
   }
 }
 
+void TestTask(void *pvParameters)
+{
+  while (true)
+  {
+    if(Show_Loadcell_Value == true)
+    {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print(nau.read());
+      vTaskDelay(pdMS_TO_TICKS(10));
+      lcd.setCursor(0, 1);
+      lcd.print(read_kg());
+      vTaskDelay(pdMS_TO_TICKS(500));
+    }
+  }
+}
+
 void setup()
 {
   delay(100);
@@ -974,8 +996,10 @@ void setup()
   xTaskCreate(StatusLEDTask, "StatusLEDTask", 2048, NULL, 1, NULL);
   xTaskCreate(WifiLEDTask, "WifiLEDTask", 2048, NULL, 1, &WifiLEDTaskHandle);
   xTaskCreate(MenuTask, "MenuTask", 4096, NULL, 1, &MenuTaskHandle);
+  xTaskCreate(TestTask, "TestTask", 2048, NULL, 1, &TestTaskHandle);
   vTaskSuspend(MenuTaskHandle);
   vTaskSuspend(PingTaskHandle);
+  vTaskSuspend(TestTaskHandle);
 
   timer_0 = timerBegin(0, 80, true);
   timerAttachInterrupt(timer_0, &PanelTimer, true);
@@ -1114,7 +1138,7 @@ void setup()
   {
     wifi_enable = true;
   }
-
+  appendLogFile(true, "==LOADCELL TEST MODE===", true);
   appendLogFile(true, "===[SYSTEM] BOOT ===", true);
   appendLogFile(true, "[SYSTEM] RESET : ", false);
   appendLogFile(false, reset_reason(rst_reason), true);
@@ -1347,10 +1371,10 @@ void loop()
     }
   }
 
-  if (Serial2.available() && !MENU_MODE) // RFID 태그
-  {
-    RFIDeventFlag = true;
-  }
+  // if (Serial2.available() && !MENU_MODE) // RFID 태그
+  // {
+  //   RFIDeventFlag = true;
+  // }
 
   if (RFIDeventFlag == true)
   {
